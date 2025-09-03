@@ -7,6 +7,7 @@
     <RouterLink to="/">Go to Home</RouterLink>
     <RouterLink to="/admin">Go to Admin</RouterLink>
     <RouterLink to="/user">Go to User</RouterLink>
+    <RouterLink to="/floorplan">Go to Floorplan</RouterLink>
   </nav>
   <main>
     <RouterView />

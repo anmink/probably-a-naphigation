@@ -1,0 +1,134 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_101",
+        "type": "room",
+        "name": "Büro 101",
+        "floor": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 0],
+            [0, 4],
+            [4, 4],
+            [4, 0],
+            [0, 0]
+          ]
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_1",
+        "type": "corridor",
+        "name": "Hauptflur EG",
+        "floor": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4, 0],
+            [4, 4],
+            [8, 4],
+            [8, 0],
+            [4, 0]
+          ]
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "door_r101_c1",
+        "type": "door",
+        "connects": ["room_101", "corridor_1"],
+        "floor": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4, 2]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_1",
+        "type": "stairs",
+        "name": "Treppenhaus A",
+        "floors": [1, 2, 3]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8, 0],
+            [8, 3],
+            [10, 3],
+            [10, 0],
+            [8, 0]
+          ]
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_a",
+        "type": "elevator",
+        "name": "Aufzug A",
+        "floors": [1, 2, 3]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9, 1.5]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "toilet_eg",
+        "type": "toilet",
+        "gender": "male",
+        "floor": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 4],
+            [0, 6],
+            [3, 6],
+            [3, 4],
+            [0, 4]
+          ]
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "exit_north",
+        "type": "exit",
+        "name": "Notausgang Nord",
+        "floor": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8, 4]
+      }
+    }
+  ]
+}
