@@ -1,0 +1,188 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "entry01",
+        "type": "entry",
+        "name": "Eingang",
+        "floor": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0, 0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "reception",
+        "type": "reception",
+        "name": "Rezeption",
+        "floor": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [2, 0],
+            [2, 4],
+            [4, 4],
+            [4, 0],
+            [2, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_00",
+        "type": "elevator",
+        "name": "Aufzug vorne",
+        "floor": [0, 1, 2, 3, 4, 5, 6]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-2, 0],
+            [-2, 3],
+            [-4, 3],
+            [-4, 0],
+            [-2, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_1",
+        "type": "corridor",
+        "name": "Hauptflur EG",
+        "floor": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-2, 0],
+            [-2, 3],
+            [-2, 10],
+            [4, 10],
+            [4, 4],
+            [2, 4],
+            [2, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_1",
+        "type": "stairs",
+        "name": "Treppenhaus EG",
+        "floor": [0, 1, 2, 3, 4]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-2, 10],
+            [-2, 20],
+            [-1, 20],
+            [-1, 10],
+            [-2, 10]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_2",
+        "type": "corridor",
+        "name": "Hauptflur EG",
+        "floor": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-1, 10],
+            [-1, 40],
+            [4, 40],
+            [4, 10],
+            [-1, 10]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_01",
+        "type": "elevator",
+        "name": "Aufzug hinten",
+        "floor": [0, 1, 2, 3, 4, 5, 6]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-1, 37],
+            [-1, 40],
+            [-3, 40],
+            [-3, 37],
+            [-1, 37]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kantine",
+        "type": "kantine",
+        "name": "Kantine",
+        "floor": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4, 13],
+            [20, 13],
+            [20, -7],
+            [4, -7],
+            [4, 13]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "area01",
+        "type": "areas",
+        "name": "Raucher Bereich",
+        "floor": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4, 13],
+            [4, 20],
+            [20, 20],
+            [20, 13],
+            [4, 13]
+          ]
+        ]
+      }
+    }
+  ]
+}
