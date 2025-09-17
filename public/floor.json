@@ -1,0 +1,467 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "entrance",
+        "name": "Eingang",
+        "type": "entrance",
+        "floor": "EG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 0],
+            [4, 0],
+            [4, 4],
+            [0, 4],
+            [0, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_eg",
+        "name": "Flur EG",
+        "type": "corridor",
+        "floor": "EG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4, 0],
+            [12, 0],
+            [12, 4],
+            [4, 4],
+            [4, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "canteen",
+        "name": "Kantine",
+        "type": "canteen",
+        "floor": "EG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 4],
+            [8, 4],
+            [8, 10],
+            [0, 10],
+            [0, 4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_eg",
+        "name": "Treppenhaus EG",
+        "type": "stairs",
+        "floor": "EG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [12, 0],
+            [14, 0],
+            [14, 4],
+            [12, 4],
+            [12, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_eg",
+        "name": "Aufzug EG",
+        "type": "elevator",
+        "floor": "EG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [14, 0],
+            [16, 0],
+            [16, 4],
+            [14, 4],
+            [14, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_1og",
+        "name": "Flur 1. OG",
+        "type": "corridor",
+        "floor": "1OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4, 0],
+            [12, 0],
+            [12, 4],
+            [4, 4],
+            [4, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "open_office_1",
+        "name": "Großraumbüro 1",
+        "type": "office_open",
+        "floor": "1OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 0],
+            [4, 0],
+            [4, 8],
+            [0, 8],
+            [0, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "office_A",
+        "name": "Einzelbüro A",
+        "type": "office_single",
+        "floor": "1OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [12, 0],
+            [16, 0],
+            [16, 4],
+            [12, 4],
+            [12, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "office_B",
+        "name": "Einzelbüro B",
+        "type": "office_single",
+        "floor": "1OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [12, 4],
+            [16, 4],
+            [16, 8],
+            [12, 8],
+            [12, 4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kitchen_1og",
+        "name": "Mitarbeiterküche 1. OG",
+        "type": "kitchen",
+        "floor": "1OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4, 4],
+            [8, 4],
+            [8, 8],
+            [4, 8],
+            [4, 4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "toilet_1og",
+        "name": "Toilette 1. OG",
+        "type": "toilet",
+        "floor": "1OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8, 4],
+            [12, 4],
+            [12, 8],
+            [8, 8],
+            [8, 4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_1og",
+        "name": "Treppenhaus 1. OG",
+        "type": "stairs",
+        "floor": "1OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [12, 8],
+            [14, 8],
+            [14, 12],
+            [12, 12],
+            [12, 8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_1og",
+        "name": "Aufzug 1. OG",
+        "type": "elevator",
+        "floor": "1OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [14, 8],
+            [16, 8],
+            [16, 12],
+            [14, 12],
+            [14, 8]
+          ]
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_2og",
+        "name": "Flur 2. OG",
+        "type": "corridor",
+        "floor": "2OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4, 0],
+            [12, 0],
+            [12, 4],
+            [4, 4],
+            [4, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "open_office_2",
+        "name": "Großraumbüro 2",
+        "type": "office_open",
+        "floor": "2OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 0],
+            [4, 0],
+            [4, 8],
+            [0, 8],
+            [0, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "office_C",
+        "name": "Einzelbüro C",
+        "type": "office_single",
+        "floor": "2OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [12, 0],
+            [16, 0],
+            [16, 4],
+            [12, 4],
+            [12, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "office_D",
+        "name": "Einzelbüro D",
+        "type": "office_single",
+        "floor": "2OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [12, 4],
+            [16, 4],
+            [16, 8],
+            [12, 8],
+            [12, 4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kitchen_2og",
+        "name": "Mitarbeiterküche 2. OG",
+        "type": "kitchen",
+        "floor": "2OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4, 4],
+            [8, 4],
+            [8, 8],
+            [4, 8],
+            [4, 4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "toilet_2og",
+        "name": "Toilette 2. OG",
+        "type": "toilet",
+        "floor": "2OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8, 4],
+            [12, 4],
+            [12, 8],
+            [8, 8],
+            [8, 4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_2og",
+        "name": "Treppenhaus 2. OG",
+        "type": "stairs",
+        "floor": "2OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [12, 8],
+            [14, 8],
+            [14, 12],
+            [12, 12],
+            [12, 8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_2og",
+        "name": "Aufzug 2. OG",
+        "type": "elevator",
+        "floor": "2OG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [14, 8],
+            [16, 8],
+            [16, 12],
+            [14, 12],
+            [14, 8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_link",
+        "type": "connector",
+        "connects": ["stairs_eg", "stairs_1og", "stairs_2og"],
+        "floor": "LINK"
+      },
+      "geometry": { "type": "Point", "coordinates": [13, 2] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_link",
+        "type": "connector",
+        "connects": ["elevator_eg", "elevator_1og", "elevator_2og"],
+        "floor": "LINK"
+      },
+      "geometry": { "type": "Point", "coordinates": [15, 2] }
+    }
+  ]
+}

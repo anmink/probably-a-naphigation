@@ -36,7 +36,7 @@ function styleFeature(feature) {
 
 function onEachFeature(feature, layer) {
   if (feature.properties.name) {
-    layer.bindTooltip(feature.properties.name, {
+    layer.bindPopup(feature.properties.name, {
       permanent: true,
       direction: 'auto', // wichtig: "center" gibt's nicht!
       className: 'polygon-label',
