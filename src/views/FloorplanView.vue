@@ -8,6 +8,7 @@
           {{ f.properties.name || f.properties.id }} ({{ f.properties.floor }})
         </option>
       </select>
+
       <label>Ziel:</label>
       <select v-model="endId">
         <option disabled value="">-- wählen --</option>
@@ -16,7 +17,7 @@
         </option>
       </select>
 
-      <button @click="calculateRoute">Route berechnen</button>
+      <button @click="buildGraph">Route berechnen</button>
 
       <label>Etage:</label>
       <select v-model="selectedFloor">
@@ -25,32 +26,46 @@
         </option>
       </select>
     </div>
+
     <LMap style="height: 560px; width: 100%" :zoom="18" :center="mapCenter" :crs="CRS">
-      <LGeoJson v-if="floorPlanData" :geojson="filteredFeatures" :options-style="styleFeatures" />
-      <LMaker v-for="room in roomLabels" :key="room.id" :lat-lng="room.latlng" :interactive="false">
-        <!--  <LTooltip :permanent="true" direction="center" class="room-label">{{ room.name }}</LTooltip> -->
-      </LMaker>
+      <!-- Nur GeoJSON der aktuellen Etage -->
+      <LGeoJson v-if="floorPlanData" :geojson="filteredFeatures" :options-style="styleFeature" />
+
+      <!-- Labels: permanente Tooltips in Raummitte -->
+      <LMarker
+        v-for="room in roomLabels"
+        :key="room.id"
+        :lat-lng="room.latlng"
+        :interactive="false"
+      >
+        <!-- <LTooltip :permanent="true" direction="center" class="room-label">
+          {{ room.name }}
+        </LTooltip> -->
+      </LMarker>
+
+      <!-- Pfad (gesamter Pfad über Etagen) gerendert für aktuell sichtbare Etage -->
       <LPolyline
         v-for="(seg, idx) in pathSegmentsForSelectedFloor"
         :key="idx"
-        :lat-lng="seg"
-        :color="red"
+        :lat-lngs="seg"
+        :color="'red'"
         :weight="4"
       />
     </LMap>
 
-    <!-- <div class="instructions" v-if="stepInstructions.length">
+    <!-- Wegbeschreibung -->
+    <div class="instructions" v-if="stepInstructions.length">
       <h3>Wegbeschreibung (ca. {{ totalDistance }} m)</h3>
       <ol>
         <li v-for="(s, i) in stepInstructions" :key="i" class="step-row">
           <span class="icon">{{ s.icon }}</span>
           <div class="step-text">
             <div class="primary">{{ s.text }}</div>
-            <div v-if="s.distance !== undefinded" class="muted">{{ s.distance.toFixed(1) }} m</div>
+            <div v-if="s.distance !== undefined" class="muted">{{ s.distance.toFixed(1) }} m</div>
           </div>
         </li>
       </ol>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -142,6 +157,63 @@ function polygonCenterXY(coordArray) {
 
 function xyToLatLng([x, y]) {
   return [y, x]
+}
+
+// --- Graph building functions ---
+function buildGraph() {
+  const features = floorPlanData.value.features
+  const nodes = new Map()
+
+  // create nodes for polygon features
+  for (const f of features) {
+    if (f.geometry.type === 'Polygon') {
+      const id = f.properties.id
+      const center = polygonCenterXY(f.geometry.coordinates[0])
+      nodes.set(id, {
+        id,
+        name: f.properties.name || id,
+        type: f.properties.type || null,
+        floor: f.properties.floor || null,
+        center,
+        neighbors: new Set(),
+      })
+    }
+  }
+
+  // connect corridors to all polygons on same floor (simple model)
+  for (const f of features) {
+    if (f.properties.type === 'corridor') {
+      const corridorId = f.properties.id
+      for (const r of features) {
+        if (r.geometry.type === 'Polygon' && r.properties.floor === f.properties.floor) {
+          const rid = r.properties.id
+          if (rid !== corridorId) {
+            nodes.get(corridorId)?.neighbors.add(rid)
+            nodes.get(rid)?.neighbors.add(corridorId)
+          }
+        }
+      }
+    }
+  }
+
+  // add vertical connectors (features with type "connector")
+  for (const conn of features.filter((f) => f.properties.type === 'connector')) {
+    const connects = conn.properties.connects || []
+    for (let i = 0; i < connects.length; i++) {
+      for (let j = 0; i < connects.length; j++) {
+        if (i === j) continue
+        const a = connects[i],
+          b = connects[j]
+        if (nodes.has(a) && nodes.has(b)) {
+          nodes.get(a).neighbors.add(b)
+          nodes.get(b).neighbors.add(a)
+        }
+      }
+    }
+  }
+  console.log('Features', features)
+  console.log('Nodes', nodes)
+  console.log('hi')
 }
 </script>
 
