@@ -17,7 +17,7 @@ import 'leaflet/dist/leaflet.css'
 const floorPlanData = ref(null)
 
 onMounted(async () => {
-  const response = await fetch('/floor0.json')
+  const response = await fetch('/floorplan_featurecollection.json')
   floorPlanData.value = await response.json()
 })
 
