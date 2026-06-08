@@ -1,35 +1,77 @@
-# indoor-navigation
+# Prototyp Indoor Navigation
 
-This template should help get you started developing with Vue 3 in Vite.
+Ein webbasierter Indoor-Navigations-Prototyp — hilft Nutzern, sich in Gebäuden mithilfe einer interaktiven kartenbasierten Oberfläche zurechtzufinden. Gedacht für Umgebungen wie Bürogebäude, Krankenhäuser oder Messehallen, in denen GPS nicht zuverlässig funktioniert.
 
-## Recommended IDE Setup
+Entwickelt mit Vue 3 und getestet mit Vitest.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Customize configuration
+## Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+| Bereich | Technologie |
+|---|---|
+| Framework | Vue 3 (Composition API) |
+| Build-Tool | Vite |
+| Sprache | JavaScript |
+| Code-Qualität | Prettier |
 
-## Project Setup
+---
 
-```sh
-npm install
+## Features
+
+- Interaktive Gebäudekarte mit Raum- und Bereichsvisualisierung
+- Navigationsrouting zwischen Punkten (POIs)
+- Suche nach Räumen, Personen oder Einrichtungen
+- Responsives Layout für Desktop und Tablet
+
+---
+
+## Projektstruktur
+
+```
+probably-a-naphigation/
+├── src/
+│   ├── components/    # UI- und Kartenkomponenten
+│   ├── views/         # Seiten-Komponenten
+│   ├── assets/        # Grundrisspläne und Icons
+│   └── main.js        # App-Einstiegspunkt
+├── public/
+├── index.html
+├── vite.config.js
 ```
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
+## Schnellstart
+
+### Voraussetzungen
+
+- Node.js 18+
+
+### Lokale Einrichtung
+
+```bash
+# Repository klonen
+git clone https://github.com/anmink/probably-a-naphigation.git
+cd probably-a-naphigation
+
+# Abhängigkeiten installieren
+npm install
+
+# Entwicklungsserver starten
 npm run dev
 ```
 
-### Compile and Minify for Production
+Die App läuft unter `http://localhost:5173`.
 
-```sh
+### Produktions-Build
+
+```bash
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+---
 
-```sh
-npm run test:unit
-```
+## Status
+
+Prototyp / Explorationsprojekt. Der Repo-Name ist eine spielerische Anspielung auf die Unsicherheit, sich in unbekannten Gebäuden zurechtzufinden.
